@@ -8,6 +8,7 @@ using UnityEngine.UIElements;
 public class MovementController : MonoBehaviour
 {
     private Rigidbody rb;
+    private StatsController stats;
     private float maxspeedmagnitude = 10f;
     private PlayerTorsoAndLegsAnimator ptla;
     public Vector3 movement;
@@ -18,6 +19,7 @@ public class MovementController : MonoBehaviour
     }
     public void Start()
     {
+        stats = GetComponent<StatsController>();
         rb = GetComponent<Rigidbody>();
         ptla = GetComponent<PlayerTorsoAndLegsAnimator>();
     }
@@ -36,8 +38,13 @@ public class MovementController : MonoBehaviour
         rb.velocity = new Vector3(potentialVelocity.x, rb.velocity.y, potentialVelocity.z);
         movement = Vector3.zero;
     }
+    public void Update()
+    {
+    }
     public void FixedUpdate()
     {
         consumeMovement();
+
+        rb.AddForce(new Vector3(0,0.1f,0), ForceMode.VelocityChange);
     }
 }

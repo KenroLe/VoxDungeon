@@ -2,7 +2,6 @@
 {
     using System;
     using UnityEngine;
-
     public class DungeonCarver : MonoBehaviour
     {
         public Transform dungeonParent = null;
@@ -163,6 +162,7 @@
 
         private void RenderMap()
         {
+
             for (int x = 0; x < _map.Width; x++)
             {
                 for (int y = 0; y < _map.Height; y++)
@@ -171,12 +171,12 @@
                     {
                         case Tile.Type.Block:
                             {
-                                GameObject.Instantiate(tilePrefab, new Vector3(x*3, 0, y*3), Quaternion.identity, dungeonParent);
+                                Instantiate(tilePrefab, new Vector3(x*3, 0, y*3), Quaternion.identity, dungeonParent);
                                 break;
                             }
                         case Tile.Type.Empty:
                             {
-                                GameObject.Instantiate(empty, new Vector3(x * 3, 0, y * 3), Quaternion.identity, dungeonParent);
+                                Instantiate(empty, new Vector3(x * 3, 0, y * 3), Quaternion.identity, dungeonParent);
                                 break;
                             }
                     }

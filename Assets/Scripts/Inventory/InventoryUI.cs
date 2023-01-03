@@ -5,14 +5,8 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    private InventoryController inv_c;
+    public InventoryController inv_c;
     public Text txt;
-    // Start is called before the first frame update
-    void Start()
-    {
-        inv_c = GetComponentInParent<InventoryController>();
-    }
-
     // Update is called once per frame
     void Update()
     {

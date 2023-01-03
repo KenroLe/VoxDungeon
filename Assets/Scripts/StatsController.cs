@@ -6,6 +6,7 @@ public class StatsController : MonoBehaviour
 {
     public float hp;
     public float damageMod;
+    public float height;
     // Start is called before the first frame update
     void Start()
     {

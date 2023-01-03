@@ -338,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   damageMod: 1
+  height: 0.8
 --- !u!1 &2609155709928959449
 GameObject:
   m_ObjectHideFlags: 0
